@@ -6,7 +6,10 @@
                 <a href="index.php">Accueil</a>
             </div>
             <div>
-                <a href="index.php?page=CreerCompte">Cree profile</a>
+                <a href="index.php?page=CreerCompte">Crée profile</a>
+            </div>
+            <div>
+                <a href="index.php?page=Connexion">Se connecter</a>
             </div>
             <div>
                 <a href="index.php?page=Devis">Mes devis</a>

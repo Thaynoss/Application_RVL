@@ -2,31 +2,34 @@
 
 function ValiderForm(){
 
-require("../WWW/controleur/controleurCreerCompte.php");
-$connexion = getConnexionBD();
+    $connexion = getConnexionBD();
+    
+    if(isset($_POST["SOUMETTRE"])){
 
-$Nom = GetCompteNom();
-$Prenom = GetComptePrenom();
-$Email = GetCompteEmail();
-$Password = GetComptePass();
+    /* Recuperer grace au echo dans le form précedent */
+        $Nom=$_POST['Nom'];
+        $Prenom=$_POST['Prenom'];
+        $Email=$_POST['Email'];
+        $Password=$_POST['MotDePasse'];
+    /**/
 
-if(isset($_POST["SOUMETTRE"])){
+        $Adresse=$_POST["Adresse"];
+        $CodePostal=$_POST["CodePostal"];
+        $Ville=$_POST["Ville"];
+        $Telephone=$_POST["Telephone"];
+        $Type=$_POST["Usager"];
 
-    $Adresse=$_POST["Adresse"];
-    $CodePostal=$_POST["CodePostal"];
-    $Ville=$_POST["Ville"];
-    $Telephone=$_POST["Telephone"];
-    $Type=$_POST["Usager"];
-
-
-    mysqli_query($connexion,"INSERT INTO rvl_table.personne(personne_nom,personne_prenom,personne_addresse,personne_codePostal,personne_ville,personne_email,personne_telephone,personne_type_usager)
+    
+        mysqli_query($connexion,"INSERT INTO rvl_table.personne(personne_nom,personne_prenom,personne_addresse,personne_codePostal,personne_ville,personne_email,personne_telephone,personne_type_usager)
                     VALUES ( \"$Nom\" , \"$Prenom\" , \"$Adresse\" , \"$CodePostal\" , \"$Ville\" , \"$Email\" , \"$Telephone\" , \"$Type\" )" );
-    mysqli_query($connexion,"INSERT INTO rvl_table.compte(compte_password) VALUES (\"$Password\")");
+    
+        $res_ID=mysqli_query($connexion,"SELECT personne_id FROM rvl_table.personne WHERE personne_email=\"$Email\" AND personne_Telephone=\"$Telephone\" ");
+        $ID = mysqli_fetch_array($res_ID);
+        //echo $row[0];
+        mysqli_query($connexion,"INSERT INTO rvl_table.compte(personne_id,compte_password) VALUES (\"$ID[0]\",\"$Password\")");
 
-    echo $Nom;
-    echo "Profile crée félicitation";
-}
-
+        echo "Profile crée félicitation";
+    }
 
 disconnectBDD($connexion);
 }

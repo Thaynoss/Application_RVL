@@ -16,10 +16,17 @@
         
         <form method="POST">
             
+            <input type="hidden" name="Nom" value="<?php echo $_POST['Nom']; ?>" >
+            <input type="hidden" name="Prenom" value="<?php echo $_POST['Prenom']; ?>"> 
+            <input type="hidden" name="Email" value=" <?php echo $_POST['Email'];  ?>">
+            <input type="hidden" name="MotDePasse" value=" <?php echo $_POST['MotDePasse']; ?>">        
+
+
             <label for="TypeUsager">Vous êtes un :</label>
             <select name="Usager">
                 <option value="Particulier">Particulier</option>
                 <option value="Professionel">Professionel</option>
+                <option value="Particulier">Fournisseur</option>
             </select></br>
             
             <label for="Adresse">Votre adresse </label></br>
@@ -46,10 +53,12 @@
                 </br>
             
             <label for="Telephone">Numéro de téléphone :</label></br>
-            <input type="text" name="Telephone" required="Saisissez votre numéro de telephone"></br>
+            <input type="tel" name="Telephone" required="Saisissez votre numéro de telephone" minlength="14" maxlength="14" placeholder="Exemple : 06 01 02 03 04"></br>
 
             <input type="submit" name="SOUMETTRE" value="Soumettre" ></p>
+            
            <?php ValiderForm() ; ?>
+
         </form>
         
         

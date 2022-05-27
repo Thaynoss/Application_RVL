@@ -2,53 +2,47 @@
 
 function ValiderFormCompte(){
 
-$connexion = getConnexionBD();
+    $connexion = getConnexionBD();
+    if(isset($_POST["VALIDER"])){
 
-if(isset($_POST["VALIDER"])){
+        $Nom=$_POST["Nom"];
+        $Prenom=$_POST["Prenom"];
+        $Email=$_POST["Email"];
+        $Pass=$_POST["MotDePasse"];
 
-    $N = GetCompteNom();
+        if(email_already_use($Email)==FALSE){
+            echo "pas utiliser";
+            return true;
+        }else{
+            return false;
+        }
 
-    $P = GetComptePrenom();
-    $E = GetCompteEmail();
-    $Pa = GetComptePass();
-    
-    $Nom=$_POST["Nom"];
-    $Prenom=$_POST["Prenom"];
-    $Email=$_POST["Email"];
-    $Pass=$_POST["MotDePasse"];
-    //VALUES ( \"$Nom\" , \"$Prenom\" , \"$Adresse\" , \"$CodePostal\" , \"$Ville\" , \"$Email\" , \"$Telephone\" , \"$Type\" )" );
+    }
 
-
-}
 disconnectBDD($connexion);
 
 }
 
-function GetCompteNom(){
+
+function email_already_use($Email){
+
     if(isset($_POST["VALIDER"])){
-        return $Nom=$_POST["Nom"];
+
+        $connexion = getConnexionBD();
+
+        $res_Email=mysqli_query($connexion,"SELECT personne_email FROM rvl_table.personne WHERE personne_email=\" $Email\" ");
+        $Email = mysqli_fetch_array($res_Email);
+        
+        if(isset($Email[0])){
+            echo "Email already used";
+            return FALSE;
+        }
+        echo "Email not used";
+        return TRUE;
+        
+        disconnectBDD($connexion);
     }
-    //return $nom;
+    
 }
-
-function GetComptePrenom(){
-    if(isset($_POST["VALIDER"])){
-        return $Prenom=$_POST["Prenom"];
-    }
-}
-
-function GetCompteEmail(){
-    if(isset($_POST["VALIDER"])){
-        return $Email=$_POST["Email"];
-    }
-}
-
-function GetComptePass(){
-    if(isset($_POST["VALIDER"])){
-        return $Pass=$_POST["MotDePasse"];
-    }
-}
-
-
 
 ?>
