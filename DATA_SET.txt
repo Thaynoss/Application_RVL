@@ -1,0 +1,93 @@
+#SUPPRESSION DES TABLES puis Creation des tables puis insertion..
+
+
+DROP TABLE IF EXISTS Chantier;
+DROP TABLE IF EXISTS Devis;
+DROP TABLE IF EXISTS Compte;
+DROP TABLE IF EXISTS Personne;
+
+
+
+CREATE TABLE `Personne`
+(
+ `personne_id`           int NOT NULL AUTO_INCREMENT,
+ `personne_nom`         varchar(40) NOT NULL ,
+ `personne_prenom`      varchar(45) NOT NULL ,
+ `personne_addresse`    varchar(100) NOT NULL ,
+ `personne_codePostal`  varchar(20) NOT NULL,
+ `personne_ville`	varchar(100) NOT NULL,
+ `personne_email`       varchar(50) NOT NULL ,
+ `personne_telephone`   varchar(20) NOT NULL ,
+ `personne_type_usager` varchar(30) NOT NULL ,
+
+PRIMARY KEY (`personne_id`)
+)ENGINE=InnoDB;
+
+CREATE TABLE `Devis`
+(
+ `devis_id`        int NOT NULL AUTO_INCREMENT,
+ `personne_id`     int NOT NULL,
+ `devis_titre`     varchar(255) NOT NULL ,
+ `devis_addresse`  varchar(100) NOT NULL ,
+ `devis_budget`    float NOT NULL ,
+ `devis_surface`   float NOT NULL ,
+ `devis_type`      float NOT NULL ,
+ `devis_ossature`  varchar(255) NOT NULL ,
+ `devis_nb_etages` int NOT NULL ,
+ `devis_message`   text NOT NULL ,
+
+PRIMARY KEY (`devis_id`),
+FOREIGN KEY (`personne_id`) REFERENCES `Personne` (`personne_id`) ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE `Compte`
+(
+ `compte_id`       int NOT NULL AUTO_INCREMENT,
+ `personne_id`     int NOT NULL,
+ `compte_password` varchar(45) NOT NULL ,
+ `compte_validity` boolean NOT NULL ,
+
+PRIMARY KEY (`compte_id`),
+FOREIGN KEY (`personne_id`) REFERENCES `Personne` (`personne_id`) ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+
+
+CREATE TABLE `Chantier`
+(
+ `id_chantier`         int NOT NULL AUTO_INCREMENT,
+ `devis_id`            int NOT NULL,
+ `chantier_status`     varchar(45) NOT NULL ,
+ `chantier_date_debut` date NOT NULL ,
+ `chantier_date_fin`   date,
+
+PRIMARY KEY (`id_chantier`),
+FOREIGN KEY (`devis_id`) REFERENCES `Devis` (`devis_id`) ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$--------$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+JEU DE DONNEE
+
+INSERT INTO personne VALUES (1,'LERAY','Nicolas','15 rue de paname', 'leray.nicolas7@gmail.com', '0664674816','particulier');
+INSERT INTO compte VALUES (1,1,'jflsjljflqjf',0);
+
+
+#table "personne"
+
+INSERT INTO personne VALUES (1,'LERAY','Nicolas','15 rue de paname','leray.nicolas7@gmail.com', '0664674816', 'particulier')
+
+
+#table "compte"
+
+INSERT INTO compte VALUES (1,1, 'leray.nicolas7@gmail.com', 'hihdhisfôfq',0)
+
+
+#table "devis"
+
+INSERT INTO devis VALUES (1, "aggrandissement Fenêtre", 15000,15,'8 Rue docteur Gauthier', 'jsaiPas', 'Bois',0,'A faire au plus vite',1)
+
+#table "chantier"
+
+INSERT INTO chantier VALUES (1,"aggrandissement Fenêtre",'En cours', 24/01-2022, NULL,1 ) 

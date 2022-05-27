@@ -1,0 +1,6 @@
+DL : - JDK 18
+     - Androide Studio
+     - VS Code
+     - WampServer
+
+MDP BDD : Maconnerie38!
