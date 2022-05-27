@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<HTMl>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Simulis</title>
+        <link rel="stylesheet" href="/css/style.css">
+        
+    </head>
+
+    <body>
+        <?php include('../WWW/static/menu.php'); ?>  
+        <h1>Creer un compte</h1>
+        <p>Ensuite, renseignez ses informations supplémentaire.</p>
+        
+        <form method="POST">
+            
+            <label for="TypeUsager">Vous êtes un :</label>
+            <select name="Usager">
+                <option value="Particulier">Particulier</option>
+                <option value="Professionel">Professionel</option>
+            </select></br>
+            
+            <label for="Adresse">Votre adresse </label></br>
+            <input type="text" name="Adresse" required="Saisissez votre adresse"></br>
+
+            <label for="CodePostal">Code Postal</label></br>
+            <input type="text" name="CodePostal" required="Saisissez le code postal"></br>
+
+            <label for="Ville">Votre ville :</label></br>
+            <input type="text" name="Ville" required="Saisissez votre ville"></br>
+            
+            <div>
+            <label for="Genre">Selectionnez votre genre :</label>
+                
+                    <input type="radio" id="F" name="RADIO" value="Femme">
+                    <label for="F">Femme</label>
+
+                    <input type="radio" id="H" name="RADIO" value="Homme">
+                    <label for="Homme">Homme</label>
+
+                    <input type="radio" id="O" name="RADIO" value="Other">
+                    <label for="Other">Autre</label>
+                </div>
+                </br>
+            
+            <label for="Telephone">Numéro de téléphone :</label></br>
+            <input type="text" name="Telephone" required="Saisissez votre numéro de telephone"></br>
+
+            <input type="submit" name="SOUMETTRE" value="Soumettre" ></p>
+           <?php ValiderForm() ; ?>
+        </form>
+        
+        
+    </body>
+
+
+</HTMl>

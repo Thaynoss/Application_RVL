@@ -1,0 +1,52 @@
+
+
+
+
+
+.flex{
+    display: flex;
+}
+
+/*.menu{
+    position: absolute;
+    padding-left:10px;
+    left: 0;
+    cursor:pointer;
+    font-size:1.5em;
+}*/
+
+.menu-complet{
+    z-index:9;
+    position: fixed;
+    height: 100vh;
+    width: 100vh;
+    top: 0;
+    transition: .5s ease;
+}
+
+.off-screen{
+    transform:translateX(-100vh);
+}
+
+nav{
+    width: 25vw;
+    height: 100vh;
+    background:rgb(71, 21, 21);
+}
+
+nav>div{
+    width: 100%;
+    text-align:center;
+}
+
+nav>div>div{
+    width: 100%;
+    padding-top:20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 2px 2px rgb(251, 21, 3,0.86);
+}
+
+nav>div>div:hover{
+    background:rgba(56, 53, 53, 0.86);
+    cursor: pointer;
+}
