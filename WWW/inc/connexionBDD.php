@@ -1,7 +1,6 @@
 <?php   
 
-//Connexion à la BDD
-
+//Permet la connexion à la BDD
 function getConnexionBD(){
     $connexion = mysqli_connect(SERVEUR,UTILISATEUR,MOTDEPASSE,BDD);
     if( mysqli_connect_errno() == TRUE){
@@ -11,7 +10,7 @@ function getConnexionBD(){
     return $connexion;
 }
 
-
+//Deconnecte de la BDD
 function disconnectBDD($connexion){
     mysqli_close($connexion);
 }

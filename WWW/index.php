@@ -1,28 +1,28 @@
 <?php
 
-//$_GET pour changer les pages car on a pas de modification de données.
+session_start(); // TODO : gérer les sessions
 
 
-session_start();
-require('inc/constantes.php');
-require('inc/routes.php');
-require('inc/connexionBDD.php');
+require('inc/constantes.php'); // Declaration de constante pour la BDD ..
+require('inc/routes.php'); // Routes de dossier//fichiers 
+require('inc/connexionBDD.php');  // Fonctions de connexion à la BDD
 
-if( isset($_GET['page']) ){
+
+
+if ( isset($_GET['page']) ){
     $nomPage = $_GET['page'];
 
-    if( isset($routes[$nomPage]) ) {
+    if ( isset($routes[$nomPage]) ) {
 
         $controleur = $routes[$nomPage]['controleur'];
         $vue = $routes[$nomPage]['vue'];
         include('controleur/'.$controleur.'.php');
         include('vue/'.$vue.'.php');
-    }
-    else {
+    } else {
         include('static/accueil.php');
     }
-}
-else {
+    
+} else {
     include('static/accueil.php');
 }
 

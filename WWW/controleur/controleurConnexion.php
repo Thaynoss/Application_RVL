@@ -1,4 +1,7 @@
 <?php
+
+
+// Appelé par l'utilisateur quand il se connecte à sa compte
 function Connexion(){
     $connexion = getConnexionBD();
     if(isset($_POST["Connexion"])){
@@ -16,6 +19,7 @@ disconnectBDD($connexion);
 }
 
 
+// Verifie si le compte existe : si l'email et le mot de passe on bien en commun l'ID de la personne
 function verifCompteExiste($Email,$Pass){
 
     if(isset($_POST["Connexion"])){

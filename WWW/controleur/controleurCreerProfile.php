@@ -25,7 +25,6 @@ function ValiderForm(){
     
         $res_ID=mysqli_query($connexion,"SELECT personne_id FROM rvl_table.personne WHERE personne_email=\"$Email\" AND personne_Telephone=\"$Telephone\" ");
         $ID = mysqli_fetch_array($res_ID);
-        //echo $row[0];
         mysqli_query($connexion,"INSERT INTO rvl_table.compte(personne_id,compte_password) VALUES (\"$ID[0]\",\"$Password\")");
 
         echo "Profile crée félicitation";

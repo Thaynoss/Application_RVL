@@ -7,8 +7,5 @@
     define('MOTDEPASSE','Maconnerie38!');
     define('BDD','rvl_table');
 
-
-    //TODO
-    //Charger la BDD suivant l'utilisateur
     
 ?>

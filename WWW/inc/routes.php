@@ -1,5 +1,7 @@
 <?php
-    
+
+//Les routes servent à simplifier l'appel des pages php
+
 $routes = array(
     'CreerCompte' => array('controleur' =>'controleurCreerCompte', 'vue' =>'vueCreerCompte'),
     'CreerProfile' => array('controleur' => 'controleurCreerProfile', 'vue' => 'vueCreerProfile'),

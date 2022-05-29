@@ -26,8 +26,5 @@
             <?php Connexion(); ?></p>
            
         </form>
-        
     </body>
-
-
 </HTMl>
