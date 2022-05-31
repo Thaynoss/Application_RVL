@@ -3,7 +3,7 @@
 <HTMl>
 
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Simulis</title>
         <link rel="stylesheet" href="/css/style.css">
         

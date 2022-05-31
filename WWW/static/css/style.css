@@ -1,19 +1,27 @@
+.blue{
+    height: 200px;
+    /*background-color: aqua;*/
+    background-image: url("../img/layered-steps-haikei\ \(1\).png");
+}
 
 
-
-
+.Box-connexion{
+    height: 500px;
+    width: 500px;
+    margin-left: 50px;
+}
 
 .flex{
     display: flex;
 }
 
-/*.menu{
+.menu{
     position: absolute;
     padding-left:10px;
     left: 0;
     cursor:pointer;
     font-size:1.5em;
-}*/
+}
 
 .menu-complet{
     z-index:9;

@@ -10,13 +10,6 @@ function ValiderFormCompte(){
         $Email=$_POST["Email"];
         $Pass=$_POST["MotDePasse"];
 
-        if(email_already_use($Email)==FALSE){
-            echo "pas utiliser";
-            return true;
-        }else{
-            return false;
-        }
-
     }
 
 disconnectBDD($connexion);
@@ -24,6 +17,9 @@ disconnectBDD($connexion);
 }
 
 
+
+// TODO : a faire en JavaScript 
+/*
 function email_already_use($Email){
 
     if(isset($_POST["VALIDER"])){
@@ -43,6 +39,6 @@ function email_already_use($Email){
         disconnectBDD($connexion);
     }
     
-}
+}*/
 
 ?>
