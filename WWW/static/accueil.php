@@ -13,11 +13,9 @@
         <link rel="stylesheet" href="static/css/style.css">   
     </head>
 
+    <?php require("header.php"); ?>
     
-    
-    <body>
-
-        <?php require("header.php"); ?>
+    <body>    
         <div class="card bg-light d-flex flex-column Box-Accueil"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
@@ -45,7 +43,7 @@
                 </div>
         </div>
 
-        <?php include('menu.php'); ?>    
+        <?php include("menu.php"); ?>    
     </body>
 
 
