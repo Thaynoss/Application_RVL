@@ -11,6 +11,8 @@
         <title>Simulis</title>
         <link rel="stylesheet" href="static/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/css/style.css">   
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/bootstrap.bundle.js"></script>
     </head>
 
     <?php require("header.php"); ?>

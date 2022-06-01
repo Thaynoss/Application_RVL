@@ -18,8 +18,6 @@
         <form action="index.php?page=CreerDevis" method="POST">
             <input type="submit" name="AjouterDevis" value="Ajouter un devis" ></br> 
         </form>
-        
-
 
     </body>
 
