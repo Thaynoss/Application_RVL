@@ -1,13 +1,17 @@
-.blue{
-    height: 200px;
-    /*background-color: aqua;*/
-    background-image: url("../img/layered-steps-haikei\ \(1\).png");
+.Header{
+    height: 140px;
+    background-image: url("../img/layered-steps-haikei.png");
 }
 
+.Box-Accueil{
+    height: 450px;
+    width: 450px;
+    margin-left: 50px;
+}
 
-.Box-connexion{
-    height: 500px;
-    width: 500px;
+.Box-Connexion{
+    height: 380px;
+    width: 380px;
     margin-left: 50px;
 }
 

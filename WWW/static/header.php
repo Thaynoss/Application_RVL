@@ -1,5 +1,5 @@
-
-    <div class="container-fluid blue">
+<header>
+    <div class="container-fluid Header">
         <div class="container">
             <div class="row">
                 <!-- col-XX pour gerer les differents type d'appareil avec bootstrap -->
@@ -10,3 +10,4 @@
             </div>
         </div>
     </div>
+</header>

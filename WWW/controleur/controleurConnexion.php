@@ -52,4 +52,8 @@ function verifCompteExiste($Email,$Pass){
     
 }
 
+function echoTest(){
+    echo "Okok";
+}
+
 ?>

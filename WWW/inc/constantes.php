@@ -4,7 +4,7 @@
 
     define('SERVEUR','localhost');
     define('UTILISATEUR','root');
-    define('MOTDEPASSE','Maconnerie38!');
+    define('MOTDEPASSE','Championdu38');
     define('BDD','rvl_table');
 
     

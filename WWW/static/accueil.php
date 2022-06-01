@@ -18,8 +18,7 @@
     <body>
 
         <?php require("header.php"); ?>
-
-        <div class="card bg-light mb-5 Box-connexion"> 
+        <div class="card bg-light d-flex flex-column Box-Accueil"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
                     <form action="index.php?page=CreerProfile" method="post" >
@@ -34,12 +33,9 @@
 
                         <label for="MotDePasse">Un mot de passe :</label></br>
                         <input type="password" name="MotDePasse" required="Saisissez un mot de passe" minlength="6"></br></br>
-
-                        <input type="submit" name="VALIDER" value="Valider" ></br> 
-                        <?php// ValiderFormCompte(); ?></p>
+                        <input type="submit" name="VALIDER" value="Valider"><?php// ValiderFormCompte(); ?>
                     </form>
                 </div>
-
                 <div class="card-footer text-muted">
                     <div class="card-body">
                     <h5>Dejà un compte ?</h5>
