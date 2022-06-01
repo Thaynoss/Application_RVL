@@ -1,6 +1,12 @@
-.Header{
+.HeaderBackground{
     height: 140px;
-    background-image: url("../img/layered-steps-haikei.png");
+    background-color: black;
+    /*background-image: url("../img/layered-steps-haikei.png");*/
+}
+
+.HeaderImg {
+    height: 140px;
+    width: 140px;
 }
 
 .Box-Accueil{
