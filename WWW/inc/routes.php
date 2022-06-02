@@ -3,6 +3,11 @@
 //Les routes servent à simplifier l'appel des pages php
 
 $routes = array(
+
+    'Prestation' => array('controleur' => 'controleurPrestation', 'vue' => 'vuePrestation'),
+
+    'Compte' => array('controleur' => 'controleurCompte', 'vue' => 'vueCompte'),
+    
     'CreerCompte' => array('controleur' =>'controleurCreerCompte', 'vue' =>'vueCreerCompte'),
     'CreerProfile' => array('controleur' => 'controleurCreerProfile', 'vue' => 'vueCreerProfile'),
     'VoirProfil' => array('controleur' => 'ControleurVoirProfile','vue' => 'vueVoirProfile'),

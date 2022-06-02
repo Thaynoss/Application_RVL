@@ -19,32 +19,7 @@
     <?php require("header.php"); ?>
     
     <body>    
-        <div class="card bg-light d-flex flex-column Box-Accueil"> 
-            <h5 class="card-header">S'inscrire</h5>
-                <div class="card-body">
-                    <form action="index.php?page=CreerProfile" method="post" >
-                        <label for="Nom">Votre nom :</label>
-                        <input type="text" name="Nom" required="Saisissez votre nom"></br>
-            
-                        <label for="Prenom">Votre prénom :</label>
-                        <input type="text" name="Prenom" required="Saisissez votre prénom"></br>
-
-                        <label for="Email">Votre email :</label></br>
-                        <input type="email" name="Email" placeholder="Email@example.com" required="Saisissez votre email" ></br>
-
-                        <label for="MotDePasse">Un mot de passe :</label></br>
-                        <input type="password" name="MotDePasse" required="Saisissez un mot de passe" minlength="6"></br></br>
-                        <input type="submit" name="VALIDER" value="Valider"><?php// ValiderFormCompte(); ?>
-                    </form>
-                </div>
-                <div class="card-footer text-muted">
-                    <div class="card-body">
-                    <h5>Dejà un compte ?</h5>
-                    <form>
-                        <a href="index.php?page=Connexion" class="btn btn-primary">Se connecter</a>
-                    </form>
-                </div>
-        </div>  
+        <h5>Page d'accueil</h5>
     </body>
 
     <?php require("footer.php");?>

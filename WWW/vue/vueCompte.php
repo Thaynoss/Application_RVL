@@ -1,20 +1,24 @@
 <!DOCTYPE HTML>
 
-<HTMl>
+<?php
+// Page pour accueillir un nouveau utilisateur, et lui proposez de s'inscrire 
+// Si l'utilisateur a déjà un compte, il peut choisir de se connecter 
+?>
 
+<HTMl>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-            <title>Simulis</title>
-            <link rel="stylesheet" href="static/css/bootstrap.min.css">
-            <link rel="stylesheet" href="static/css/style.css">   
-            <script src="static/js/bootstrap.min.js"></script>
-            <script src="static/js/bootstrap.bundle.js"></script>
-            <script src="static/js/script.js"></script>
+        <title>Simulis</title>
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/style.css">   
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/bootstrap.bundle.js"></script>
+        <script src="static/js/script.js"></script>
     </head>
 
-        <?php include('../WWW/static/header.php'); ?>  
-    <body>
-        
+    <?php require("../WWW/static/header.php"); ?>
+    
+    <body>    
         <div class="card bg-light d-flex flex-column Box-Inscription"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
@@ -33,9 +37,16 @@
                         <input type="submit" name="VALIDER" value="Valider"><?php// ValiderFormCompte(); ?>
                     </form>
                 </div>
-        </div>
+                <div class="card-footer text-muted">
+                    <div class="card-body">
+                    <h5>Dejà un compte ?</h5>
+                    <form>
+                        <a href="index.php?page=Connexion" class="btn btn-primary">Se connecter</a>
+                    </form>
+                </div>
+        </div>  
     </body>
 
-    <?php include('../WWW/static/footer.php'); ?>  
+    <?php require("../WWW/static/footer.php");?>
 
 </HTMl>

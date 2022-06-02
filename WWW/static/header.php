@@ -6,11 +6,11 @@
                     <ul>
                     <div class="row">
                         <div class="col">
-                            <a class="Link" href="#">Accueil</a>
+                            <a class="Link" href="index.php">Accueil</a>
                         </div>
 
                         <div class="col">
-                            <li class="Deroulant"><a id="MenuD"href="#">Nos préstations &ensp;</a>
+                            <li class="Deroulant"><a id="MenuD"href="#">Préstations &ensp;</a>
                                 <ul class="sous-menu">
                                     <li><a href="#1">Maçonnerie générale</a></li>
                                     <li><a href="#2">PifPafPouf</a></li>
@@ -28,7 +28,7 @@
                         </div>
 
                         <div class="col">
-                            <a class="Link" href="#">Compte</a>
+                            <a class="Link" href="index.php?page=Compte">Compte</a>
                         </div>
                     </div>
                     </ul>
