@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="static/css/style.css">   
         <script src="static/js/bootstrap.min.js"></script>
         <script src="static/js/bootstrap.bundle.js"></script>
+        <script src="static/js/script.js"></script>
     </head>
 
     <?php require("header.php"); ?>
@@ -43,10 +44,9 @@
                         <a href="index.php?page=Connexion" class="btn btn-primary">Se connecter</a>
                     </form>
                 </div>
-        </div>
-
-        <?php include("menu.php"); ?>    
+        </div>  
     </body>
 
+    <?php require("footer.php");?>
 
 </HTMl>
