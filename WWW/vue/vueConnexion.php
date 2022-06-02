@@ -5,15 +5,16 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Simulis</title>
-        <link rel="stylesheet" href="static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="static/css/style.css">    
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static/fontawesome-free-6.1.1-web/css/all.css">    
     </head>
 
-    <body>
-        <?php require("static/header.php"); ?>
-        
+    <?php require("static/header.php"); ?>
+    
+    <body>    
         <div class="card bg-light mb-4 Box-Connexion"> 
-            <h5 class="card-header">Connexion</h5>
+            <h4 class="card-header">Connexion</h4>
                 <div class="card-body">
                     <form action="" method="POST" >
                         <h5 class="card-title">Adresse email :</h5>
@@ -31,4 +32,6 @@
                 </div>
         </div>       
     </body>
+
+    <?php require('static/footer.php'); ?>
 </HTMl>

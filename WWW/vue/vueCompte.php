@@ -19,7 +19,7 @@
     <?php require("../WWW/static/header.php"); ?>
     
     <body>    
-        <div class="card bg-light d-flex flex-column Box-Inscription"> 
+        <div class="card bg-light Box-Inscription"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
                     <form action="index.php?page=CreerProfile" method="post" >
@@ -39,10 +39,11 @@
                 </div>
                 <div class="card-footer text-muted">
                     <div class="card-body">
-                    <h5>Dejà un compte ?</h5>
-                    <form>
-                        <a href="index.php?page=Connexion" class="btn btn-primary">Se connecter</a>
-                    </form>
+                        <h5>Dejà un compte ?</h5>
+                            <form>
+                                <a href="index.php?page=Connexion" class="btn btn-primary">Se connecter</a>
+                            </form>
+                    </div>
                 </div>
         </div>  
     </body>

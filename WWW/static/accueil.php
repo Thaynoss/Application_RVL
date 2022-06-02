@@ -9,8 +9,10 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Simulis</title>
-        <link rel="stylesheet" href="static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="static/css/style.css">   
+        
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        
         <script src="static/js/bootstrap.min.js"></script>
         <script src="static/js/bootstrap.bundle.js"></script>
         <script src="static/js/script.js"></script>
