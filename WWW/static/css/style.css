@@ -17,26 +17,6 @@ a{
     font-size:16px;
 }
 
-.Box-Inscription{
-    position: relative;
-    z-index: 0;
-    height: 450px;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-}
-
-.Box-Connexion{
-    position: relative;
-    z-index: 0;
-    height: 380px;
-    width: 350px;
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 nav{
     position: relative;
@@ -78,6 +58,60 @@ nav > ul li:hover .sous-menu{
 nav ul li{
     text-align: center;
 }
+
+
+.Box-Inscription{
+    position: relative;
+    z-index: 0;
+    height: 450px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+
+.Box-Connexion{
+    position: relative;
+    z-index: 0;
+    height: 380px;
+    width: 350px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Styling for errors on form*/
+.form_error span {
+    width: 80%;
+    height: 35px;
+    margin: 3px 10%;
+    font-size: 1.1em;
+    color: #D83D5A;
+  }
+  .form_error input {
+    border: 1px solid #D83D5A;
+  }
+  
+  /*Styling in case no errors on form*/
+  .form_success span {
+    width: 80%;
+    height: 35px;
+    margin: 3px 10%;
+    font-size: 1.1em;
+    color: green;
+  }
+  .form_success input {
+    border: 1px solid green;
+  }
+  #error_msg {
+    color: red;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+
+/**/
 
 .sous-menu{
     display: none;

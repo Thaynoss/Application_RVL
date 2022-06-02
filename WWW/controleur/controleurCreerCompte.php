@@ -1,15 +1,18 @@
 <?php
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+echo $actual_link;
 
 function ValiderFormCompte(){
 
     $connexion = getConnexionBD();
-    if(isset($_POST["VALIDER"])){
+    if(isset($_POST["ValiderFormInscription"])){
 
         $Nom=$_POST["Nom"];
         $Prenom=$_POST["Prenom"];
         $Email=$_POST["Email"];
         $Pass=$_POST["MotDePasse"];
-
+        email_already_use();
     }
 
 disconnectBDD($connexion);
@@ -19,26 +22,20 @@ disconnectBDD($connexion);
 
 
 // TODO : a faire en JavaScript 
-/*
-function email_already_use($Email){
+function email_already_use(){
+    $connexion = getConnexionBD();
 
-    if(isset($_POST["VALIDER"])){
-
-        $connexion = getConnexionBD();
-
-        $res_Email=mysqli_query($connexion,"SELECT personne_email FROM rvl_table.personne WHERE personne_email=\" $Email\" ");
-        $Email = mysqli_fetch_array($res_Email);
-        
-        if(isset($Email[0])){
-            echo "Email already used";
-            return FALSE;
+    if (isset($_POST['email_check'])) {
+        $email = $_POST['Email'];
+        $sql = "SELECT * FROM rvl_table.personne WHERE personne_email='$email'";
+        $results = mysqli_query($connexion, $sql);
+        if (mysqli_num_rows($results) > 0) {
+        echo "taken";	
+        }else{
+        echo 'not_taken';
         }
-        echo "Email not used";
-        return TRUE;
-        
-        disconnectBDD($connexion);
+        exit();
     }
-    
-}*/
-
+    disconnectBDD($connexion);
+}
 ?>

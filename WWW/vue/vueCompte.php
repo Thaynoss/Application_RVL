@@ -1,9 +1,6 @@
 <!DOCTYPE HTML>
 
-<?php
-// Page pour accueillir un nouveau utilisateur, et lui proposez de s'inscrire 
-// Si l'utilisateur a déjà un compte, il peut choisir de se connecter 
-?>
+<?php require('../WWW/controleur/controleurCreerCompte.php'); ?>
 
 <HTMl>
     <head>
@@ -11,9 +8,12 @@
         <title>Simulis</title>
         <link rel="stylesheet" href="static/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/css/style.css">   
+        
+        <!-- scripts -->
+        <script src="static/js/jquery-3.6.0.min.js"></script>
+        <script src="static/js/script.js"></script>
         <script src="static/js/bootstrap.min.js"></script>
         <script src="static/js/bootstrap.bundle.js"></script>
-        <script src="static/js/script.js"></script>
     </head>
 
     <?php require("../WWW/static/header.php"); ?>
@@ -22,7 +22,7 @@
         <div class="card bg-light Box-Inscription"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
-                    <form action="index.php?page=CreerProfile" method="post" >
+                    <form >
                         <label for="Nom">Votre nom :</label>
                         <input type="text" name="Nom" required="Saisissez votre nom"></br>
             
@@ -30,11 +30,12 @@
                         <input type="text" name="Prenom" required="Saisissez votre prénom"></br>
 
                         <label for="Email">Votre email :</label></br>
-                        <input type="email" name="Email" placeholder="Email@example.com" required="Saisissez votre email" ></br>
+                        <input type="email" name="Email" placeholder="Email@example.com" required="Saisissez votre email" id="id_email"></br>
+                        <span></span>
 
                         <label for="MotDePasse">Un mot de passe :</label></br>
-                        <input type="password" name="MotDePasse" required="Saisissez un mot de passe" minlength="6"></br></br>
-                        <input type="submit" name="VALIDER" value="Valider"><?php// ValiderFormCompte(); ?>
+                        <input type="password" name="MotDePasse" required="Saisissez un mot de passe" minlength="6" id="id_password"></br></br>
+                        <input type="submit" name="ValiderFormInscription" value="Valider" id="btn_form"><?php// ValiderFormCompte(); ?>
                     </form>
                 </div>
                 <div class="card-footer text-muted">

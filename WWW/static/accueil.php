@@ -15,6 +15,7 @@
         
         <script src="static/js/bootstrap.min.js"></script>
         <script src="static/js/bootstrap.bundle.js"></script>
+        <script src="static/js/jquery-3.6.0.min.js"></script>
         <script src="static/js/script.js"></script>
     </head>
 
