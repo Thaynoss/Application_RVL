@@ -21,7 +21,7 @@
                         <div class="col">
                             <li class="Deroulant"><a id="MenuD"href="#">Devis &ensp;</a>
                                 <ul class="sous-menu">
-                                    <li><a href="#1">Faire un devis </a></li>
+                                    <li><a href="index.php?page=Devis">Faire un devis </a></li>
                                     <li><a href="#2">Voir devis</a></li>
                                 </ul>
                             </li>
