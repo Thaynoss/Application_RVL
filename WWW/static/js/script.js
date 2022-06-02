@@ -15,68 +15,73 @@ burger.addEventListener('click', function(e) {
 
 
 // Verification du form d'inscription
-console.log("okoko");
+
 $('document').ready(function(){
-  console.log("okoko");
+
   var email_state = false;
 
-   $('#id_email').on('blur', function(){
+   $('#id_email').on('blur', function(){ 
     var email = $('#id_email').val();
+    
     if (email == '') {
-      email_state = false;
       return;
     }
-    console.log("ok1");
+
     $.ajax({
-       url: 'http://192.168.1.17/index.php?page=Compte',
-       type: 'post',
+       type: 'POST',
        data: {
          'email_check' : 1,
          'email' : email,
        },
+       url: 'index?page=Compte',
+       
        success: function(response){
-         if (response == 'taken' ) {
+         console.log(email);
+         alert(response);
+         if (response == "taken" ) {
+          alert("aaaaaaaaaaaaaaaaa");
            email_state = false;
-           console.log("ok3");
            $('#id_email').parent().removeClass();
            $('#id_email').parent().addClass("form_error");
            $('#id_email').siblings("span").text('Désolé... Emaile déja utilisé');
-         }else if (response == 'not_taken') {
-           email_state = true;
-           console.log("ok4");
+         }else if (response == "not_taken") {
+          email_state = true;
+          alert("bbbbbbbbbbbbbbbbbbbb");
            $('#id_email').parent().removeClass();
+           
            $('#id_email').parent().addClass("form_success");
            $('#id_email').siblings("span").text('Email ok');
          }
        }
+       
     });
   });
-  console.log("ok2");
+  /*
   $('#btn_form').on('click', function(){
     var email = $('#id_email').val();
-    var password = $('#id_password').val();
-    console.log("ok6");
+      console.log("email: "+email);
+      console.log("OKOKOKOKOKOKO");
+    
     if (email_state == false) {
+      alert('FALSE');
      $('#error_msg').text('Fix the errors in the form first');
    }else{
-       // proceed with form submission
+       alert("aaaaaaaaaaaaaaaaaaaaaa");
+       
        $.ajax({
-         url: 'http://192.168.1.17/index.php?page=Compte',
-         type: 'post',
+         
+         type: 'POST',
          data: {
            'save' : 1,
            'email' : email,
-           'username' : username,
-           'password' : password,
          },
-         
+         url: 'index?page=Compte',
          success: function(response){
            alert('user saved');
            console.log("ok7");
            $('#id_email').val('');
-           $('#id_password').val('');
          }
        });
     }
-  });
+  });*/
  });

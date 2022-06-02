@@ -7,7 +7,8 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Simulis</title>
         <link rel="stylesheet" href="static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="static/css/style.css">   
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="shortcut icon" href="#">   
         
         <!-- scripts -->
         <script src="static/js/jquery-3.6.0.min.js"></script>
@@ -22,20 +23,24 @@
         <div class="card bg-light Box-Inscription"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
-                    <form >
-                        <label for="Nom">Votre nom :</label>
+                    <form action="index.php?page=Compte" id="register_form">
+                        <div id="error_msg"></div>
+                        
+                        <label>Votre nom :</label>
                         <input type="text" name="Nom" required="Saisissez votre nom"></br>
             
                         <label for="Prenom">Votre prénom :</label>
                         <input type="text" name="Prenom" required="Saisissez votre prénom"></br>
 
+                        <div>
                         <label for="Email">Votre email :</label></br>
-                        <input type="email" name="Email" placeholder="Email@example.com" required="Saisissez votre email" id="id_email"></br>
+                        <input type="email" name="email" placeholder="Email@example.com" required="Saisissez votre email" id="id_email"></br>
                         <span></span>
+                        </div>
 
                         <label for="MotDePasse">Un mot de passe :</label></br>
                         <input type="password" name="MotDePasse" required="Saisissez un mot de passe" minlength="6" id="id_password"></br></br>
-                        <input type="submit" name="ValiderFormInscription" value="Valider" id="btn_form"><?php// ValiderFormCompte(); ?>
+                        <input type="submit" name="ValiderFormInscription" value="Valider" id="btn_form">
                     </form>
                 </div>
                 <div class="card-footer text-muted">
