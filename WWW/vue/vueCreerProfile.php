@@ -2,11 +2,18 @@
 
 <HTMl>
 
-    <head>
+<head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Simulis</title>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="shortcut icon" href="#">   
         
+        <!-- scripts -->
+        <script src="static/js/jquery-3.6.0.min.js"></script>
+        <script src="static/js/script.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/bootstrap.bundle.js"></script>
     </head>
 
     <body>

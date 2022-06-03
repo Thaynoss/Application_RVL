@@ -33,17 +33,17 @@ $('document').ready(function(){
          'email_check' : 1,
          'email' : email,
        },
-       url: 'index?page=Compte',
+       url: 'index.php?page=Compte',
        
        success: function(response){
          console.log(email);
-         alert(response);
-         if (response == "taken" ) {
-          alert("aaaaaaaaaaaaaaaaa");
-           email_state = false;
-           $('#id_email').parent().removeClass();
-           $('#id_email').parent().addClass("form_error");
-           $('#id_email').siblings("span").text('Désolé... Emaile déja utilisé');
+         console.log(response);
+         if (response == "response" ) {
+            alert("aaaaaaaaaaaaaaaaa");
+            email_state = false;
+            $('#id_email').parent().removeClass();
+            $('#id_email').parent().addClass("form_error");
+            $('#id_email').siblings("span").text('Désolé... Emaile déja utilisé');
          }else if (response == "not_taken") {
           email_state = true;
           alert("bbbbbbbbbbbbbbbbbbbb");
@@ -56,32 +56,15 @@ $('document').ready(function(){
        
     });
   });
-  /*
-  $('#btn_form').on('click', function(){
-    var email = $('#id_email').val();
-      console.log("email: "+email);
-      console.log("OKOKOKOKOKOKO");
-    
-    if (email_state == false) {
-      alert('FALSE');
-     $('#error_msg').text('Fix the errors in the form first');
-   }else{
-       alert("aaaaaaaaaaaaaaaaaaaaaa");
-       
-       $.ajax({
-         
-         type: 'POST',
-         data: {
-           'save' : 1,
-           'email' : email,
-         },
-         url: 'index?page=Compte',
-         success: function(response){
-           alert('user saved');
-           console.log("ok7");
-           $('#id_email').val('');
-         }
-       });
-    }
-  });*/
  });
+
+
+/*
+ function ValidateEmail(mail) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formeInscription.emailAddr.ValiderFormInscription)){
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
+*/

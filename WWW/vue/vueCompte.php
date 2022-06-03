@@ -23,7 +23,7 @@
         <div class="card bg-light Box-Inscription"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
-                    <form action="index.php?page=Compte" id="register_form">
+                    <form  name="formeInscription" action="<?php echo $action; ?>" id="register_form" method="POST" >
                         <div id="error_msg"></div>
                         
                         <label>Votre nom :</label>
@@ -34,7 +34,7 @@
 
                         <div>
                         <label for="Email">Votre email :</label></br>
-                        <input type="email" name="email" placeholder="Email@example.com" required="Saisissez votre email" id="id_email"></br>
+                        <input  type="email" name="email" placeholder="Email@example.com" required="Saisissez votre email" id="id_email"></br>
                         <span></span>
                         </div>
 

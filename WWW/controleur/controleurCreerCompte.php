@@ -1,28 +1,8 @@
 <?php
 
-function ValiderFormCompte(){
-    email_already_use();
-   $connexion = getConnexionBD();/*
-    if(isset($_POST["ValiderFormInscription"])){
-        email_already_use();
-        $Nom=$_POST["Nom"];
-        $Prenom=$_POST["Prenom"];
-        $Email=$_POST["email"];
-        $Pass=$_POST["MotDePasse"];
-        email_already_use();
-    }*/
+function email_already_use($connexion){
 
-//disconnectBDD($connexion);
-
-}
-
-email_already_use();
-
-// TODO : a faire en JavaScript 
-function email_already_use(){
-    $connexion = getConnexionBD();
-
-    if (isset($_POST['email_check'])|| isset($_POST['ValiderFormInscription'])) {
+    if ( isset($_POST['email_check']) ) {
         $email = $_POST["email"];
         
         $sql = "SELECT * FROM rvl_table.personne WHERE personne_email=\" $email\" ";
@@ -35,6 +15,26 @@ function email_already_use(){
         }
         exit();
     }
-    disconnectBDD($connexion);
+
 }
+
+
+$connexion = getConnexionBD();
+/* On se connecte la base de données pour verifier si l'email est pas déja utilisé,
+si elle est pas utilisé, on envoie le formulaire a la page suivante
+sinon on retourne sur la meme page.
+*/
+email_already_use($connexion);
+    if(isset($_POST["ValiderFormInscription"]) && email_already_use($connexion)){    
+        $Nom = $_POST["Nom"];
+        $Prenom = $_POST["Prenom"];
+        $Email = $_POST["email"];
+        $Pass = $_POST["MotDePasse"];
+        $action = "index.php?page=CreerProfile";
+    }
+    else{
+        $action = "index.php?page=Compte";
+    }
+disconnectBDD($connexion);
+
 ?>
