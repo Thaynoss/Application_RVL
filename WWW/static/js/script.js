@@ -35,22 +35,19 @@ $('document').ready(function(){
        },
        url: 'index.php?page=Compte',
        
-       success: function(response){
-         console.log(email);
-         console.log(response);
-         if (response == "response" ) {
-            alert("aaaaaaaaaaaaaaaaa");
+       success: function(data){ 
+        var response = JSON.parse(data.replace("<!DOCTYPE HTML>","")); // on enlève la balise HTML pour avoir le json taken.true seulement
+         if (response.taken == true ) {
             email_state = false;
             $('#id_email').parent().removeClass();
             $('#id_email').parent().addClass("form_error");
             $('#id_email').siblings("span").text('Désolé... Emaile déja utilisé');
-         }else if (response == "not_taken") {
+         }else if (response.taken == false) {
           email_state = true;
-          alert("bbbbbbbbbbbbbbbbbbbb");
            $('#id_email').parent().removeClass();
            
            $('#id_email').parent().addClass("form_success");
-           $('#id_email').siblings("span").text('Email ok');
+           $('#id_email').siblings("span").text('Email est disponible');
          }
        }
        

@@ -9,9 +9,11 @@ function email_already_use($connexion){
         $results = mysqli_query($connexion, $sql);
         
         if (mysqli_num_rows($results) > 0) {
-        echo "taken";	
+
+        echo json_encode(["taken"=>true]); //Ptit coup de json pour valider si email déja prise
+  
         }else{
-        echo "not_taken";
+            echo json_encode(["taken"=>false]);
         }
         exit();
     }
