@@ -27,7 +27,7 @@
 
                         <input type="submit" class="btn btn-primary" name="Connexion" value="Se connecter">
                         </br><?php Connexion(); ?></br>
-                        <a href="index.php?page=CreerCompte">Pas de compte ? Cliquer ici !</a>
+                        <a href="index.php?page=Compte">Pas de compte ? Cliquer ici !</a>
                     </form>
                 </div>
         </div>       
