@@ -23,7 +23,7 @@
         <div class="card bg-light Box-Inscription"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
-                    <form  name="formeInscription" action="<?php echo $action; ?>" id="register_form" method="POST" >
+                    <form  name="formeInscription" id="register_form" method="POST" >
                         <div id="error_msg"></div>
                         
                         <label>Votre nom :</label>

@@ -39,9 +39,10 @@
         </div>
         <!-- Grid column -->
 
-        <!-- Grid column -->
+        
+        <!-- Grid column --><!--
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
+          <!-- Links --><!--
           <h6 class="text-uppercase fw-bold mb-4">Chez</h6>
           <p>
             <a href="#!" class="text-reset">ta</a>
@@ -55,7 +56,7 @@
           <p>
             <a href="#!" class="text-reset">tout</a>
           </p>
-        </div>
+        </div>-->
         <!-- Grid column -->
 
         <!-- Grid column -->
@@ -65,16 +66,13 @@
             Liens utiles
           </h6>
           <p>
-            <a href="#!" class="text-reset">je sais</a>
+            <a href="#!" class="text-reset">Présentation</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">pas quoi</a>
+            <a href="#!" class="text-reset">Maçonnerie</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">mettre ici</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Monsieur le patron</a>
+            <a href="#!" class="text-reset">Contact</a>
           </p>
         </div>
         <!-- Grid column -->
