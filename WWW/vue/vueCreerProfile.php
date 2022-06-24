@@ -20,12 +20,12 @@
         <?php include('../WWW/static/menu.php'); ?>
         <h1>Creer un compte</h1>
         <p>Ensuite, renseignez ses informations supplémentaire.</p>
-        
+        <?php echo $GLOBALS['Nom']; ?>
         <form method="POST">
             
             <input type="hidden" name="Nom" value="<?php echo $_POST["Nom"]; ?>" >
             <input type="hidden" name="Prenom" value="<?php echo $_POST["Prenom"]; ?>"> 
-            <input type="hidden" name="Email" value=" <?php echo $_POST["email"];  ?>">
+            <input type="hidden" name="Email" value=" <?php echo $_POST["Email"];  ?>">
             <input type="hidden" name="MotDePasse" value=" <?php echo $_POST["MotDePasse"]; ?>">        
 
 

@@ -1,5 +1,5 @@
 <?php
-
+require("../WWW/controleur/controleurCreerCompte.php");
 function ValiderForm(){
 
     $connexion = getConnexionBD();

@@ -18,27 +18,26 @@
     </head>
 
     <?php require("../WWW/static/header.php"); ?>
-    
     <body>    
         <div class="card bg-light Box-Inscription"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
-                    <form  name="formeInscription" id="register_form" method="POST" >
+                    <form  name="formeInscription" id="register_form" action="" method="POST" >
                         <div id="error_msg"></div>
                         
                         <label>Votre nom :</label>
                         <input type="text" name="Nom" required="Saisissez votre nom"></br>
             
-                        <label for="Prenom">Votre prénom :</label>
+                        <label>Votre prénom :</label>
                         <input type="text" name="Prenom" required="Saisissez votre prénom"></br>
 
                         <div>
-                        <label for="Email">Votre email :</label></br>
+                        <label>Votre email :</label></br>
                         <input  type="email" name="email" placeholder="Email@example.com" required="Saisissez votre email" id="id_email"></br>
                         <span></span>
                         </div>
 
-                        <label for="MotDePasse">Un mot de passe :</label></br>
+                        <label>Un mot de passe :</label></br>
                         <input type="password" name="MotDePasse" required="Saisissez un mot de passe" minlength="6" id="id_password"></br></br>
                         <input type="submit" name="ValiderFormInscription" value="Valider" id="btn_form">
                     </form>

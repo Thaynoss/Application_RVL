@@ -51,15 +51,14 @@ email_already_use($connexion);
         $Prenom = $_POST["Prenom"];
         $Email = $_POST["email"];
         $Pass = $_POST["MotDePasse"];
-
-        echo $_POST["Nom"];
-
+        $Action= "index.php?page=CreerProfile";
             ?> 
                 <script type="text/javascript">
                 window.location = "index.php?page=CreerProfile";
                 </script>      
             <?php // on utilise javascript car la redirection est asynchrone
     }
+    
     
 disconnectBDD($connexion);
 
