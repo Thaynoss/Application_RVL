@@ -159,6 +159,14 @@ text-align: center;
     font-size:7px;
 }
 
+#ModalLongTitle{
+    color: #3370c0;
+}
+
+#ModalText{
+    color: black;
+}
+
 
 .FooterBackground{
     background-color:rgb(180, 170, 170);

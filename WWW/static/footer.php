@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="static/fontawesome-free-6.1.1-web/css/all.css">    
-
+<link rel="stylesheet" href="static/fontawesome-free-6.1.1-web/css/all.css">
 <!-- Footer -->
 <footer class="container-fluid text-center text-lg-start text-white" style="background-color: #45637d;"> <!-- FooterBackground a la place de bg-XX -->
   <!-- Section: Social media -->
@@ -96,6 +95,46 @@
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2022 Copyright:
     <a class="text-light fw-bold" href="https://www.rvlconcept.fr/">RVLConcept.fr</a>
+    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"> Mentions légales</button>
+
+    <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-center" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="ModalLongTitle">Mentions légales</h4>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="ModalText">
+              <h5>RVL Concept</h5>
+              <p>Adresse : 15 route de Jalerieu 38630 LES AVENIERES</p>
+              <p>Tél : 06 37 56 60 28</br>
+              E-mail : contact@rvlconcept.fr</p>
+              <p>Forme juridique : SARL </br>
+              Siret : 8511850018 </br>
+              Tva intracommunautaire : FR</p>
+
+              <h5>DROITS DE PROPRIÉTÉ INTELLECTUELLE</h5>
+              <p>Le contenu de ce site web est protégé juridiquement. Il est interdit de le copier ou de le diffuser à des fins commerciales, de le modifier ou de le rendre accessible à des tiers.</br>
+              Le site internet est réalisé selon la demande du client. le client définit la/les couleurs(s), l’arborescence, le contenu du site internet lors de la signature du contrat et en accepte la diffusion lors de la signature du procès-verbal.</p>
+
+              <h5>COOKIES</h5>
+              <p>Le site utilise google analytics, un service d’analyse internet de google inc. pour permettre une analyse de l’utilisation du site internet.
+              les informations générées par l’utilisation de google analytics et relatives à votre utilisation de ce site internet (y compris votre adresse ip) sont transmises à un serveur de google inc. aux états-unis et y sont mémorisées.
+              Google utilise ces informations uniquement afin d’analyser le site internet en créant des évaluations et des graphiques anonymes sur le nombre de visiteurs, le nombre de pages consultées par utilisateur, etc.
+              Ces données sont utilisées par wecade uniquement à des fins d’étude de marché et pour améliorer la présentation de ce site internet en fonction des besoins.
+
+              <h5>LIENS HYPERTEXTES</h5>
+              <p>Le site donne accès à d’autres sites via des liens hypertextes.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
   <!-- Copyright -->
 </footer>
