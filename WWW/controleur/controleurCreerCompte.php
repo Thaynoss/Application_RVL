@@ -20,10 +20,8 @@ function email_already_use($connexion){
 }
 
 function email_already_use_valide_FORM($connexion){
-    echo "<p> email already used fonction </p>";
     if ( isset($_POST['ValiderFormInscription']) ) {
         $email = $_POST["email"];
-        echo "<p> if de la fonction </p>";
         $sql = "SELECT * FROM rvl_table.personne WHERE personne_email=\" $email\" ";
         $results = mysqli_query($connexion, $sql);
         
@@ -46,20 +44,43 @@ sinon on retourne sur la meme page.
 
 email_already_use($connexion);
 
+
     if(isset($_POST["ValiderFormInscription"]) && email_already_use_valide_FORM($connexion) == true ){
         $Nom = $_POST["Nom"];
         $Prenom = $_POST["Prenom"];
         $Email = $_POST["email"];
         $Pass = $_POST["MotDePasse"];
-        $Action= "index.php?page=CreerProfile";
-            ?> 
-                <script type="text/javascript">
-                window.location = "index.php?page=CreerProfile";
-                </script>      
-            <?php // on utilise javascript car la redirection est asynchrone
+        
     }
     
+function send_data(){
     
+    $connexion = getConnexionBD();
+    email_already_use($connexion);
+    if(isset($_POST["ValiderFormInscription"]) && email_already_use_valide_FORM($connexion) == true ){
+    $Nom = $_POST["Nom"];
+    $Prenom = $_POST["Prenom"];
+    $Email = $_POST["email"];
+    $Pass = $_POST["MotDePasse"];
+    echo "<p> ok</p>";
+    return $action ="index.php?page=CreerProfile";
+
+    }
+    else
+        return $action="";
+}
+
+
+function init_var_action(){
+    $connexion = getConnexionBD();
+    email_already_use($connexion);
+    if(isset($_POST["ValiderFormInscription"]) && email_already_use_valide_FORM($connexion) == true ){
+    return $action ="index.php?page=CreerProfile";
+
+    }
+    else
+        return $action="";
+}
 disconnectBDD($connexion);
 
 

@@ -16,17 +16,19 @@
         <script src="static/js/bootstrap.bundle.js"></script>
     </head>
 
+    <?php require("../WWW/static/header.php"); ?>
     <body>
-        <?php include('../WWW/static/menu.php'); ?>
         <h1>Creer un compte</h1>
         <p>Ensuite, renseignez ses informations supplémentaire.</p>
-        <?php echo $GLOBALS['Nom']; ?>
-        <form method="POST">
+        
+        <?php require("controleur/controleurCreerCompte.php"); ?>
+        <?php var_dump($_POST); ?>
+        <form method="post">
             
-            <input type="hidden" name="Nom" value="<?php echo $_POST["Nom"]; ?>" >
-            <input type="hidden" name="Prenom" value="<?php echo $_POST["Prenom"]; ?>"> 
-            <input type="hidden" name="Email" value=" <?php echo $_POST["Email"];  ?>">
-            <input type="hidden" name="MotDePasse" value=" <?php echo $_POST["MotDePasse"]; ?>">        
+            <input type="hidden" name="nom" value="<?php echo $_POST['Nom']; ?>" >
+            <input type="hidden" name="prenom" value="<?php echo  $_POST["Prenom"]; ?>"> 
+            <input type="hidden" name="email2" value=" <?php echo $_POST["email"];  ?>">
+            <input type="hidden" name="motDePasse" value=" <?php echo $_POST["MotDePasse"]; ?>">        
 
 
             <label for="TypeUsager">Vous êtes un :</label>
@@ -71,5 +73,6 @@
         
     </body>
 
+    <?php require("../WWW/static/footer.php");?>
 
 </HTMl>

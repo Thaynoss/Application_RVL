@@ -1,16 +1,16 @@
 <?php
-require("../WWW/controleur/controleurCreerCompte.php");
+//require("controleur/controleurCreerCompte.php");
 function ValiderForm(){
 
     $connexion = getConnexionBD();
-    
+
     if(isset($_POST["SOUMETTRE"])){
 
     /* Recuperer grace au echo dans le form précedent */
-        $Nom=$_POST['Nom'];
-        $Prenom=$_POST['Prenom'];
-        $Email=$_POST['Email'];
-        $Password=$_POST['MotDePasse'];
+        $Nom=$_POST["nom"];
+        $Prenom=$_POST["prenom"];
+        $Email=$_POST['email2'];
+        $Password=$_POST['motDePasse'];
     /**/
 
         $Adresse=$_POST["Adresse"];
