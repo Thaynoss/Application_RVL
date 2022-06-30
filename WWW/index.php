@@ -2,7 +2,6 @@
 
 session_start(); // TODO : gérer les sessions
 
-
 require('inc/constantes.php'); // Declaration de constante pour la BDD ..
 require('inc/routes.php'); // Routes de dossier//fichiers 
 require('inc/connexionBDD.php');  // Fonctions de connexion à la BDD

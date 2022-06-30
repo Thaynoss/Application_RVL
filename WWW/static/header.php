@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <header>
         <div class="container-fluid HeaderBackground">
             <div class="container">
@@ -26,11 +28,16 @@
                                 </ul>
                             </li>
                         </div>
-
-                        <div class="col">
-                            <a class="Link" href="index.php?page=Compte">Compte</a>
+                        <?php if($_SESSION["nom"]==NULL){ ?>
+                            <div class="col">
+                                <a class="Link" href="index.php?page=Compte">Se connecter</a>
+                            </div>
+                        <?php }else{ ?>
+                            <div class="col">
+                                <a class="Link" href="index.php?page=Profile">Profile</a>
+                            </div>
+                        <?php } ?>
                         </div>
-                    </div>
                     </ul>
                 </nav>
             </div>

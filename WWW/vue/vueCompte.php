@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE HTML>
 
 <?php require('../WWW/controleur/controleurCreerCompte.php'); ?>
@@ -22,10 +24,7 @@
         <div class="card bg-light Box-Inscription"> 
             <h5 class="card-header">S'inscrire</h5>
                 <div class="card-body">
-                    <?php $action=init_var_action();?>
-                    <form  method="post" name="formeInscription" id="register_form" action="<?php echo $action; ?>" >
-                        <input type="hidden" name="action" value="<?php echo $action; ?>" >
-                        <?php echo "<p>$action</p>"?>
+                    <form  method="post" name="formeInscription" id="register_form" action="" >
                         <div id="error_msg"></div>
                         
                         <label>Votre nom :</label>
@@ -43,7 +42,6 @@
                         <label>Un mot de passe :</label></br>
                         <input type="password" name="MotDePasse" required="Saisissez un mot de passe" minlength="6" id="id_password"></br></br>
                         <input type="submit" name="ValiderFormInscription" value="Valider" id="btn_form">
-                        <?php send_data(); ?>
                     </form>
                 </div>
                 <div class="card-footer text-muted">

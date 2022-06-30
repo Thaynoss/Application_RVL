@@ -10,9 +10,9 @@ $routes = array(
     
     'CreerCompte' => array('controleur' =>'controleurCreerCompte', 'vue' =>'vueCreerCompte'),
     'CreerProfile' => array('controleur' => 'controleurCreerProfile', 'vue' => 'vueCreerProfile'),
-    'VoirProfil' => array('controleur' => 'ControleurVoirProfile','vue' => 'vueVoirProfile'),
+    
     'Connexion' => array('controleur' =>'controleurConnexion', 'vue' => 'vueConnexion'),
-    'ModifierInformations' => array('controleur' => 'controleurModifierPersonne','vue' => 'vueModifierPersonne'),
+    'Profile' => array('controleur' => 'ControleurProfile','vue' => 'vueProfile'),
 
     'Devis' => array('controleur' => 'controleurDevis','vue' => 'vueDevis'),
     'CreerDevis' => array('controleur' => 'controleurCreerDevis','vue' =>'vueCreerDevis'),

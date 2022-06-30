@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 
 <HTMl>
@@ -20,14 +21,11 @@
     <body>
         <h1>Creer un compte</h1>
         <p>Ensuite, renseignez ses informations supplémentaire.</p>
-        
-        <?php require("controleur/controleurCreerCompte.php"); ?>
-        <?php var_dump($_POST); ?>
-        <form method="post">
+        <form method="post" action="index.php">
             
             <input type="hidden" name="nom" value="<?php echo $_POST['Nom']; ?>" >
             <input type="hidden" name="prenom" value="<?php echo  $_POST["Prenom"]; ?>"> 
-            <input type="hidden" name="email2" value=" <?php echo $_POST["email"];  ?>">
+            <input type="hidden" name="email" value=" <?php echo $_POST["email"];  ?>">
             <input type="hidden" name="motDePasse" value=" <?php echo $_POST["MotDePasse"]; ?>">        
 
 
@@ -65,11 +63,8 @@
             <input type="tel" name="Telephone" required="Saisissez votre numéro de telephone" minlength="14" maxlength="14" placeholder="Exemple : 06 01 02 03 04"></br>
 
             <input type="submit" name="SOUMETTRE" value="Soumettre" ></p>
-            
-           <?php ValiderForm() ; ?>
 
-        </form>
-        
+        </form>        
         
     </body>
 

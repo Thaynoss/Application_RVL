@@ -6,10 +6,8 @@ function Connexion(){
     $connexion = getConnexionBD();
     if(isset($_POST["Connexion"])){
 
-        
         $Email=$_POST["Email"];
         $Pass=$_POST["MotDePasse"];
-
         verifCompteExiste($Email,$Pass);
 
     }

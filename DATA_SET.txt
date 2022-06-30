@@ -1,14 +1,14 @@
 #SUPPRESSION DES TABLES puis Creation des tables puis insertion..
 
 
-DROP TABLE IF EXISTS Chantier;
-DROP TABLE IF EXISTS Devis;
-DROP TABLE IF EXISTS Compte;
-DROP TABLE IF EXISTS Personne;
+DROP TABLE IF EXISTS chantier;
+DROP TABLE IF EXISTS devis;
+DROP TABLE IF EXISTS compte;
+DROP TABLE IF EXISTS personne;
 
 
 
-CREATE TABLE `Personne`
+CREATE TABLE `personne`
 (
  `personne_id`           int NOT NULL AUTO_INCREMENT,
  `personne_nom`         varchar(40) NOT NULL ,
@@ -23,7 +23,7 @@ CREATE TABLE `Personne`
 PRIMARY KEY (`personne_id`)
 )ENGINE=InnoDB;
 
-CREATE TABLE `Devis`
+CREATE TABLE `devis`
 (
  `devis_id`        int NOT NULL AUTO_INCREMENT,
  `personne_id`     int NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE `Devis`
  `devis_message`   text NOT NULL ,
 
 PRIMARY KEY (`devis_id`),
-FOREIGN KEY (`personne_id`) REFERENCES `Personne` (`personne_id`) ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (`personne_id`) REFERENCES `personne` (`personne_id`) ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE=InnoDB;
 
-CREATE TABLE `Compte`
+CREATE TABLE `compte`
 (
  `compte_id`       int NOT NULL AUTO_INCREMENT,
  `personne_id`     int NOT NULL,
@@ -48,12 +48,12 @@ CREATE TABLE `Compte`
  `compte_validity` boolean NOT NULL ,
 
 PRIMARY KEY (`compte_id`),
-FOREIGN KEY (`personne_id`) REFERENCES `Personne` (`personne_id`) ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (`personne_id`) REFERENCES `personne` (`personne_id`) ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE=InnoDB;
 
 
 
-CREATE TABLE `Chantier`
+CREATE TABLE `chantier`
 (
  `id_chantier`         int NOT NULL AUTO_INCREMENT,
  `devis_id`            int NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE `Chantier`
  `chantier_date_fin`   date,
 
 PRIMARY KEY (`id_chantier`),
-FOREIGN KEY (`devis_id`) REFERENCES `Devis` (`devis_id`) ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (`devis_id`) REFERENCES `devis` (`devis_id`) ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE=InnoDB;
 
 

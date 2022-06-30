@@ -1,5 +1,5 @@
-<?php
-
+<?php 
+/* Aprés la création de compte ou la connexion on gère la session */
     $connexion = getConnexionBD();
 
     if(isset($_POST["SOUMETTRE"])){

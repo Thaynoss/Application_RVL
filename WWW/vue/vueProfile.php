@@ -1,10 +1,6 @@
 <?php
     session_start();//Debut de session
-    if(isset($_POST["SOUMETTRE"])){
-        $_SESSION["Prenom"] = $_POST["prenom"];
-        $_SESSION["Nom"] = $_POST["nom"];
-        $_SESSION["Email"] = $_POST["email"]
-    }
+    /* Aprés la création de compte ou la connexion on gère la session */
 ?>
 
 <!DOCTYPE HTML>
@@ -15,19 +11,18 @@
         
         <link rel="stylesheet" href="static/css/bootstrap.css">
         <link rel="stylesheet" href="static/css/style.css">
-        
         <script src="static/js/bootstrap.min.js"></script>
         <script src="static/js/bootstrap.bundle.js"></script>
         <script src="static/js/jquery-3.6.0.min.js"></script>
         <script src="static/js/script.js"></script>
     </head>
 
-    <?php require("header.php"); ?>
+    <?php require("../WWW/static/header.php"); ?>
     
     <body>    
-        <h5>Page d'accueil</h5>
+        <h5>Bonjour <?php echo $_SESSION["prenom"]; ?></h5>
     </body>
 
-    <?php require("footer.php");?>
+    <?php require("../WWW/static/footer.php"); ?>
 
 </HTMl>

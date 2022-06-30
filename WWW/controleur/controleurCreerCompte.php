@@ -10,9 +10,10 @@ function email_already_use($connexion){
         
         if (mysqli_num_rows($results) > 0) {
 
-        echo json_encode(["taken"=>true]); //Ptit coup de json pour valider si email déja prise est renvoyé une data exploitable
+        echo json_encode(["taken"=>true]); //Ptit coup de json pour valider si email déja prise est renvoyé une data exploitable   
         }else{
             echo json_encode(["taken"=>false]);
+        
         }
         exit();
     }
@@ -28,7 +29,6 @@ function email_already_use_valide_FORM($connexion){
         if (mysqli_num_rows($results) > 0) {
         return FALSE;
         }else{
-            $action="index.php?page=CreerProfile";
         return TRUE; // TRUE => AUCUNE ADRESSE DONC c'est bon
         }
         exit();
@@ -49,38 +49,9 @@ email_already_use($connexion);
         $Nom = $_POST["Nom"];
         $Prenom = $_POST["Prenom"];
         $Email = $_POST["email"];
-        $Pass = $_POST["MotDePasse"];
-        
+        $Pass = $_POST["MotDePasse"];        
     }
-    
-function send_data(){
-    
-    $connexion = getConnexionBD();
-    email_already_use($connexion);
-    if(isset($_POST["ValiderFormInscription"]) && email_already_use_valide_FORM($connexion) == true ){
-    $Nom = $_POST["Nom"];
-    $Prenom = $_POST["Prenom"];
-    $Email = $_POST["email"];
-    $Pass = $_POST["MotDePasse"];
-    echo "<p> ok</p>";
-    return $action ="index.php?page=CreerProfile";
 
-    }
-    else
-        return $action="";
-}
-
-
-function init_var_action(){
-    $connexion = getConnexionBD();
-    email_already_use($connexion);
-    if(isset($_POST["ValiderFormInscription"]) && email_already_use_valide_FORM($connexion) == true ){
-    return $action ="index.php?page=CreerProfile";
-
-    }
-    else
-        return $action="";
-}
 disconnectBDD($connexion);
 
 
