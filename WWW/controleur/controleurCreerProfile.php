@@ -17,7 +17,7 @@
         $Telephone=$_POST["Telephone"];
         $Type=$_POST["Usager"];
     
-        mysqli_query($connexion,"INSERT INTO rvl_table.personne(personne_nom,personne_prenom,personne_addresse,personne_codePostal,personne_ville,personne_email,personne_telephone,personne_type_usager)
+        mysqli_query($connexion,"INSERT INTO rvl_table.personne(personne_nom,personne_prenom,personne_adresse,personne_codePostal,personne_ville,personne_email,personne_telephone,personne_type_usager)
                     VALUES ( \"$Nom\" , \"$Prenom\" , \"$Adresse\" , \"$CodePostal\" , \"$Ville\" , \"$Email\" , \"$Telephone\" , \"$Type\" )" );
     
         $res_ID=mysqli_query($connexion,"SELECT personne_id FROM rvl_table.personne WHERE personne_email=\"$Email\" AND personne_Telephone=\"$Telephone\" ");

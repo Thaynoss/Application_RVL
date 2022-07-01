@@ -1,5 +1,5 @@
 <?php
-    session_start();//Debut de session
+    //session_start();//Debut de session
     /* Aprés la création de compte ou la connexion on gère la session */
 ?>
 
@@ -22,13 +22,14 @@
     <body>    
         <h5>Bonjour</h5>
         <?php 
+        echo var_dump($_SESSION);
         echo "<p>".$_SESSION["Prenom"]."</p>";
         echo "<p>".$_SESSION["Nom"]."</p>";
         echo "<p>".$_SESSION["Email"]."</p>";
         echo "<p>".$_SESSION["Telephone"]."</p>";
         echo "<p>".$_SESSION["Ville"]."</p>";
         echo "<p>".$_SESSION["Code_Postal"]."</p>";
-        echo "<p>".$_SESSION["Adrsse"]."</p>";
+        echo "<p>".$_SESSION["Adresse"]."</p>";
         echo "<p>".$_SESSION["Type_Usager"]."</p>";
         ?>
     </body>

@@ -13,7 +13,7 @@ CREATE TABLE `personne`
  `personne_id`           int NOT NULL AUTO_INCREMENT,
  `personne_nom`         varchar(40) NOT NULL ,
  `personne_prenom`      varchar(45) NOT NULL ,
- `personne_addresse`    varchar(100) NOT NULL ,
+ `personne_adresse`    varchar(100) NOT NULL ,
  `personne_codePostal`  varchar(20) NOT NULL,
  `personne_ville`	varchar(100) NOT NULL,
  `personne_email`       varchar(50) NOT NULL ,

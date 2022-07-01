@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php //session_start() ?>
 
 <header>
         <div class="container-fluid HeaderBackground">
@@ -28,7 +28,7 @@
                                 </ul>
                             </li>
                         </div>
-                        <?php if($_SESSION["Nom"]==NULL){ ?>
+                        <?php if(isset($_SESSION["Nom"])==false){ ?>
                             <div class="col">
                                 <a class="Link" href="index.php?page=Compte">Se connecter</a>
                             </div>

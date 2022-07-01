@@ -1,17 +1,16 @@
 <?php
-    session_start();//Debut de session
+    //session_start();//Debut de session
     require("controleurAccueil.php");
 
     if(isset($_POST["SOUMETTRE"])){
-        $_SESSION["Prenom"] = $_POST["prenom"];
-        $_SESSION["Nom"] = $_POST["nom"];
-        $_SESSION["Email"] = $_POST["email"];
+        create_session_by_inscription();
     }
-    if($_SESSION['id_session']!=NULL){
-        connexion_session();
+    if(isset($_SESSION['id_session'])){
+        create_session_by_connexion();
     }
     if(isset($_POST["deconnexion"])){
         session_destroy();
+        header("Refresh:1; url=index.php");
     }
 ?>
 
