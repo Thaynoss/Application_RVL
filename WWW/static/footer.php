@@ -110,10 +110,9 @@
             <div class="modal-body" id="ModalText">
               <h5>RVL Concept</h5>
               <p>Adresse : 15 route de Jalerieu 38630 LES AVENIERES</p>
-              <p>Tél : 06 37 56 60 28</br>
               E-mail : contact@rvlconcept.fr</p>
               <p>Forme juridique : SARL </br>
-              Siret : 8511850018 </br>
+              Siret : 84227499500013 </br>
               Tva intracommunautaire : FR</p>
 
               <h5>DROITS DE PROPRIÉTÉ INTELLECTUELLE</h5>

@@ -28,13 +28,21 @@
                                 </ul>
                             </li>
                         </div>
-                        <?php if($_SESSION["nom"]==NULL){ ?>
+                        <?php if($_SESSION["Nom"]==NULL){ ?>
                             <div class="col">
                                 <a class="Link" href="index.php?page=Compte">Se connecter</a>
                             </div>
                         <?php }else{ ?>
                             <div class="col">
-                                <a class="Link" href="index.php?page=Profile">Profile</a>
+                                <li class="Deroulant"><a id="MenuD"href="#">Profil &ensp;</a>
+                                    <ul class="sous-menu">
+                                        <li><a class="Link" href="index.php?page=Profile">Voir profil</a></li>
+                                        <li><form action="index.php" method="post">
+                                                    <button class="Link" type="submit" name="deconnexion">Déconnexion</a>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
                             </div>
                         <?php } ?>
                         </div>

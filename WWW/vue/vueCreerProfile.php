@@ -60,7 +60,7 @@
                 </br>
             
             <label for="Telephone">Numéro de téléphone :</label></br>
-            <input type="tel" name="Telephone" required="Saisissez votre numéro de telephone" minlength="14" maxlength="14" placeholder="Exemple : 06 01 02 03 04"></br>
+            <input type="tel" name="Telephone" required="Saisissez votre numéro de telephone" minlength="10" maxlength="10" placeholder="Exemple : 0601020304"></br>
 
             <input type="submit" name="SOUMETTRE" value="Soumettre" ></p>
 

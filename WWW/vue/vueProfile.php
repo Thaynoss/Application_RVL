@@ -20,7 +20,17 @@
     <?php require("../WWW/static/header.php"); ?>
     
     <body>    
-        <h5>Bonjour <?php echo $_SESSION["prenom"]; ?></h5>
+        <h5>Bonjour</h5>
+        <?php 
+        echo "<p>".$_SESSION["Prenom"]."</p>";
+        echo "<p>".$_SESSION["Nom"]."</p>";
+        echo "<p>".$_SESSION["Email"]."</p>";
+        echo "<p>".$_SESSION["Telephone"]."</p>";
+        echo "<p>".$_SESSION["Ville"]."</p>";
+        echo "<p>".$_SESSION["Code_Postal"]."</p>";
+        echo "<p>".$_SESSION["Adrsse"]."</p>";
+        echo "<p>".$_SESSION["Type_Usager"]."</p>";
+        ?>
     </body>
 
     <?php require("../WWW/static/footer.php"); ?>

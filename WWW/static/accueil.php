@@ -1,9 +1,17 @@
 <?php
     session_start();//Debut de session
+    require("controleurAccueil.php");
+
     if(isset($_POST["SOUMETTRE"])){
         $_SESSION["Prenom"] = $_POST["prenom"];
         $_SESSION["Nom"] = $_POST["nom"];
-        $_SESSION["Email"] = $_POST["email"]
+        $_SESSION["Email"] = $_POST["email"];
+    }
+    if($_SESSION['id_session']!=NULL){
+        connexion_session();
+    }
+    if(isset($_POST["deconnexion"])){
+        session_destroy();
     }
 ?>
 
